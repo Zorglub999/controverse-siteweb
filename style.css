@@ -1,0 +1,200 @@
+/* style.css - Version 2.0 (Design Moderne) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #0f766e;       /* Teal vibrant pour l'IA */
+    --primary-dark: #134e4a;
+    --secondary: #7c3aed;     /* Violet élégant */
+    --accent: #06b6d4;        /* Cyan brillant */
+    --text-main: #0f172a;     /* Quasi-noir */
+    --text-light: #475569;
+    --bg-body: #f0f9ff;
+    --bg-card: #ffffff;
+    --gradient-1: linear-gradient(135deg, #0f766e 0%, #7c3aed 100%);
+    --gradient-2: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+    --shadow-sm: 0 1px 3px rgba(15,118,110,0.15);
+    --shadow-lg: 0 20px 25px -5px rgba(15,118,110,0.2), 0 10px 10px -5px rgba(124,58,237,0.1);
+}
+
+/* --- Base --- */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    margin: 0;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Empêche le scroll horizontal accidentel */
+}
+
+h1, h2, h3 { font-weight: 700; margin-top: 0; }
+h1 { font-size: 2.8rem; letter-spacing: -1px; margin-bottom: 1.5rem; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+h2 { color: var(--primary); font-size: 1.8rem; }
+h3 { color: var(--text-main); }
+a { color: var(--primary); text-decoration: none; transition: all 0.3s; font-weight: 500; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+.button {
+    display: inline-block;
+    background: var(--gradient-1) !important;
+    color: white !important;
+    padding: 12px 28px !important;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-decoration: none !important;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(15,118,110,0.3);
+    text-decoration: none !important;
+}
+
+/* --- Navigation Glassmorphism --- */
+header {
+    background: linear-gradient(135deg, rgba(15,118,110,0.95) 0%, rgba(124,58,237,0.95) 100%);
+    backdrop-filter: blur(10px); /* L'effet verre dépoli */
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(6,182,212,0.3);
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 20px rgba(15,118,110,0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Petit trait animé sous les liens du menu */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #06b6d4;
+    transition: width 0.3s ease;
+}
+nav a:hover::after { width: 100%; }
+
+/* --- Contenu --- */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Cartes & Sections (Ombres douces) --- */
+article, section, .actor-card, .team-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(15,118,110,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(6,182,212,0.15);
+}
+
+/* Effet Hover générique */
+.actor-card:hover, .team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(15,118,110,0.25);
+    border-color: rgba(124,58,237,0.3);
+}
+
+/* --- Animations (Scroll Reveal) --- */
+/* Cette classe sera ajoutée via JS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Page Équipe Spécifique --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary);
+    transition: transform 0.3s;
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.1);
+}
+
+.team-role {
+    display: inline-block;
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+    color: #cbd5e1;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(6,182,212,0.2);
+}
+footer a { color: #06b6d4; transition: color 0.3s; }
+footer a:hover { color: white; }
+
+.disclaimer {
+    border: 1px solid rgba(6,182,212,0.3);
+    background: linear-gradient(135deg, rgba(15,118,110,0.05) 0%, rgba(124,58,237,0.05) 100%);
+    padding: 1.2rem;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
