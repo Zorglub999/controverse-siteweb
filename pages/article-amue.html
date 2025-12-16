@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Article AMUE - Collection Numérique</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Style spécifique pour simuler une page d'article "Papier/A4" */
+        .page-a4 {
+            background: white;
+            max-width: 210mm; /* Largeur A4 */
+            margin: 2rem auto;
+            padding: 2.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            font-family: 'Georgia', serif; /* Police plus "journal" */
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .amue-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .chapeau {
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .article-content h3 {
+            color: var(--primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+            margin-top: 2rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* L'Encart optionnel (Sidebar dans l'article) */
+        .encart {
+            float: right;
+            width: 300px;
+            background: #f1f5f9;
+            padding: 1.5rem;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .encart h4 {
+            margin-top: 0;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .img-container img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .caption {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .authors-box {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #555;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .ai-notice {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 10px;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="argumentation.html">L'Argumentation</a></li>
+            <li><a href="acteurs.html">Les Acteurs</a></li>
+            <li><a href="chronologie.html">Chronologie</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <div class="page-a4">
+        <div class="amue-header">
+            <div>
+                <small>Collection Numérique AMUE - 2025</small><br>
+                <strong>Thème : Accessibilité & Interopérabilité</strong>
+            </div>
+            <img src="../assets/amue.png" alt="Logo AMUE" style="height: 60px;">
+        </div>
+
+        <h1 class="article-title">L'Intelligence Artificielle à l'Université : Rupture Pédagogique ou Continuité Numérique ?</h1>
+
+        <p class="chapeau">
+            Alors que les établissements supérieurs visent une meilleure accessibilité des savoirs et une interopérabilité des outils, l'irruption brutale de l'IA générative rebat les cartes. Entre promesse d'un tutorat universel et risque d'une nouvelle fracture numérique, enquête sur une controverse qui secoue l'éducation.
+        </p>
+
+        <div class="encart">
+            <h4>Zoom : L'Interopérabilité des Savoirs</h4>
+            <p>
+                L'un des enjeux majeurs soulevés par nos experts est la capacité des systèmes d'IA à s'interfacer avec les bases de connaissances académiques.
+            </p>
+            <p>
+                Si Jérémi Sauvage compare l'IA à un "simulacre" qui concatène des mots sans conscience, Antoine Pietri y voit une opportunité d'interopérabilité cognitive : l'IA comme pont entre l'étudiant et des bases de données complexes, facilitant l'accès à l'information technique.
+            </p>
+        </div>
+
+        <div class="article-content">
+            <p>
+                L'année 2023 restera marquée par une onde de choc dans les amphithéâtres. L'arrivée massive d'outils comme ChatGPT a forcé l'Université à s'interroger non plus sur "comment enseigner le numérique", mais "comment enseigner à l'heure où le numérique génère du savoir". Cette controverse, loin d'être un simple débat technique, touche aux fondements mêmes de l'accessibilité cognitive et de l'équité étudiante.
+            </p>
+
+            <h3>Une continuité brutale plutôt qu'une révolution</h3>
+            <p>
+                Contrairement aux discours alarmistes annonçant la fin de l'école, nos entretiens révèlent une réalité plus nuancée. Antoine Pietri, ingénieur pédagogique, qualifie ce phénomène de « continuité brutale ». À l'instar de la calculatrice ou de Wikipédia, l'IA ne remplace pas l'intelligence humaine, elle en déplace le curseur. L'interopérabilité entre l'humain et la machine devient la compétence clé : il ne s'agit plus de stocker le savoir, mais de savoir le requêter via le « Prompt Engineering ».
+            </p>
+
+            <h3>L'accessibilité en question : vers une fracture 2.0 ?</h3>
+            <p>
+                Si l'IA promet sur le papier une accessibilité renforcée — agissant comme un tuteur personnel disponible 24h/24 pour les étudiants en difficulté — la réalité de terrain décrite par Céline Averseng, experte en Digital Learning, est plus sombre. Le risque n'est pas technologique, mais social.
+            </p>
+            <p>
+                Nous observons l'émergence d'une nouvelle fracture numérique. D'un côté, une élite étudiante capable de maîtriser ces outils pour augmenter sa productivité ; de l'autre, des étudiants qui s'y fient aveuglément, remplaçant l'apprentissage par la génération automatique, victimes de ce que l'on pourrait appeler une « illusion de compétence ». L'accessibilité technique de l'outil ne garantit pas l'accessibilité intellectuelle de son usage. De plus, la domination de l'anglais dans les modèles les plus performants pose un problème d'interopérabilité culturelle et linguistique, favorisant certains profils au détriment d'autres.
+            </p>
+
+            <h3>Repenser l'évaluation pour préserver la valeur du diplôme</h3>
+            <p>
+                Face à l'impossibilité technique de distinguer un texte humain d'un texte généré (aucun outil d'interopérabilité de détection n'étant fiable à 100%), la réaction du corps enseignant est paradoxale : un retour au papier. Pour garantir la valeur du diplôme et l'équité, on assiste à une "dés-numérisation" des examens.
+            </p>
+            <p>
+                Cependant, pour l'avenir, Jérémi Sauvage, enseignant-chercheur, alerte sur les limites physiques du modèle. L'impact écologique de ces technologies et le risque d'un "effondrement du modèle" (si les IA s'entraînent sur des données générées par des IA) pourraient forcer l'Université à revaloriser les savoirs non-automatisables : le raisonnement critique, l'éthique, et peut-être même, de manière surprenante, les compétences manuelles et artisanales.
+            </p>
+
+            <p>
+                En conclusion, l'intégration de l'IA ne doit pas être subie. Elle nécessite une politique d'établissement claire pour garantir que l'interopérabilité technique serve l'accessibilité pédagogique, sans jamais sacrifier l'autonomie intellectuelle des étudiants.
+            </p>
+        </div>
+
+        <div class="authors-box">
+            <strong>Auteurs & Contributeurs :</strong><br>
+            Article rédigé par les étudiants de Polytech Montpellier (DaMS 3) :<br>
+            Elliot BARTHELEMY, Corentin CUENCA, Anas IMARRIGHEN, Manuel PONS, Ismail TAAISSAT.<br>
+        </div>
+
+        <div class="ai-notice">
+            🤖 <strong>Transparence IA :</strong>
+            Conformément aux consignes de l'AMUE, nous précisons que cet article a été produit avec l'assistance d'une Intelligence Artificielle générative pour la structuration et la correction syntaxique de nos interviews. Les propos rapportés restent ceux des experts interviewés.
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="disclaimer">
+        ⚠️ <strong>Polytech Montpellier (2025-2026)</strong>
+    </div>
+    <p>
+        <a href="mentions.html">Mentions Légales</a> |
+        <a href="bibliographie.html">Sources</a>
+    </p>
+</footer>
+
+</body>
+</html>
