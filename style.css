@@ -178,15 +178,15 @@ article, section, .actor-card, .team-card {
 
 /* --- Footer --- */
 footer {
-    background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
-    color: #cbd5e1;
+    background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+    color: #ffffff;
     text-align: center;
     padding: 3rem 1rem;
     margin-top: auto;
-    border-top: 1px solid rgba(6,182,212,0.2);
+    border-top: 1px solid rgba(6,182,212,0.3);
 }
-footer a { color: #06b6d4; transition: color 0.3s; }
-footer a:hover { color: white; }
+footer a { color: #ffffff; transition: color 0.3s; }
+footer a:hover { color: #f0f9ff; text-decoration: underline; }
 
 .disclaimer {
     border: 1px solid rgba(6,182,212,0.3);
